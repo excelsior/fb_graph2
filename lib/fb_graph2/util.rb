@@ -3,11 +3,7 @@ module FbGraph2
     module_function
 
     def as_identifier(object)
-      if object.respond_to? :id
-        object.id
-      else
-        object
-      end
+      object.id rescue object
     end
   end
 end
